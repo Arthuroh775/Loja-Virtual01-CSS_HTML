@@ -1,0 +1,109 @@
+
+
+.slides{
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+    cursor: pointer;
+}
+
+.slides img {
+    width: 33.3333%;
+    height: 250px;
+    object-fit: cover;
+    animation: slide 5s ;
+}
+
+@keyframes slide {
+    0% , 33% {transform: translateX(0);}
+    34% , 66% {transform: translateX(-33.3333%);}
+    67% , 100% {transform: translateX(-66.6666%);}
+}
+
+.produtos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    width: 400px;
+    margin: 30px auto;
+    justify-items: center;
+    max-width: 1000px;
+}
+
+.produto img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 10px;
+    border: black;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    
+}
+
+.produto{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 25px;
+    width: 90%;
+    transition: transform 0.2s ease , boxs-shadow 0.3 ease;
+    color: black;
+    cursor: pointer;
+}
+.produto:hover{
+    color: white;
+    background-color: black;
+    border: blue 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(46, 44, 44);
+    color: white;
+    padding: 40px;
+}
+
+header{
+    text-align: center;
+    background-color: #00796b;
+    padding: 25px;
+    color: white;
+    border-radius: 30%;
+    margin-bottom: 30px;
+}
+.carrosel{
+    width: 800%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.slide{
+    width: 33.33333%;
+    flex-shrink: 0;
+}
+
+.titulo-produtos{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #00796b;
+}
+p{
+  font-size: 20px;  
+}
+span{
+    font-size: 10px;
+    text-decoration: line-through;
+    color: rgb(199, 122, 7);
+}
